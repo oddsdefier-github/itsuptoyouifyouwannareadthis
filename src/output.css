@@ -610,6 +610,10 @@ video {
   width: auto;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
@@ -747,6 +751,10 @@ video {
 
 .outline {
   outline-style: solid;
+}
+
+.\[w\:R\FFFD-\] {
+  w: R�-;
 }
 
 .hover\:bg-purple-800:hover {

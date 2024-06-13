@@ -3,21 +3,24 @@ console.log('console logging');
 let nameInput = document.getElementById('name-input');
 let submitName = document.getElementById('submit');
 
+let acceptedNames = [
+    "emmanda", "emmanda hanes"
+];
 
 submitName.addEventListener('click', function (e) {
     e.preventDefault();
     console.log(nameInput.value);
-    let allowedName = 'emmanda';
-    let nameInputVal = nameInput.value.trim();
-    nameInputVal = nameInputVal.toLowerCase();
 
-    if (nameInputVal !== allowedName) {
-        manageErrorState();
-    } else {
+    let nameInputVal = nameInput.value.trim().toLowerCase();
+
+    if (acceptedNames.includes(nameInputVal)) {
         console.log('Welcome Emmanda');
-        redirectToPage();
+        redirectToPage(); // Function to handle redirection
+    } else {
+        manageErrorState(); // Function to handle errors
     }
 });
+
 
 nameInput.addEventListener('keyup', function (e) {
     e.preventDefault();
